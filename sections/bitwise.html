@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitwise Instructions - Q8 Assembly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Bitwise Instructions</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <nav class="navbar" id="navbar">
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="data-movement.html" class="nav-link">Data Movement</a></li>
+      <li><a href="arithmetic.html" class="nav-link">Arithmetic</a></li>
+      <li><a href="logic.html" class="nav-link">Logic</a></li>
+      <li><a href="bitwise.html" class="nav-link">Bitwise</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Bitwise Instructions</h2>
+
+    <div class="instruction">
+      <h3>AND / OR / XOR</h3>
+      <p><strong>Usage:</strong> <code class="code-box">AND,regA,regB</code>, etc.</p>
+      <p><strong>Description:</strong> Performs the bitwise operation between <code>regA</code> and <code>regB</code>, storing the result in <code>regA</code>.</p>
+      <p><strong>Example:</strong> <code class="code-box">XOR,0,1</code> performs <code>R0 XOR R1</code> and stores the result in <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>NOT</h3>
+      <p><strong>Usage:</strong> <code class="code-box">NOT,reg</code></p>
+      <p><strong>Description:</strong> Flips all bits in the specified register.</p>
+      <p><strong>Example:</strong> <code class="code-box">NOT,0</code> flips the bits of <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>SHL / SHR</h3>
+      <p><strong>Usage:</strong> <code class="code-box">SHL,reg,amount</code>, <code>SHR reg, amount</code></p>
+      <p><strong>Description:</strong> Shifts the bits in the register left or right by the specified amount.</p>
+      <p><strong>Example:</strong> <code class="code-box">SHL,0,1</code> shifts bits in <code>R0</code> one position left.</p>
+    </div>
+  </section>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logic Instructions - Q8 Assembly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Logic Instructions</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <nav class="navbar" id="navbar">
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="data-movement.html" class="nav-link">Data Movement</a></li>
+      <li><a href="arithmetic.html" class="nav-link">Arithmetic</a></li>
+      <li><a href="logic.html" class="nav-link">Logic</a></li>
+      <li><a href="bitwise.html" class="nav-link">Bitwise</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Logic Instructions</h2>
+
+    <div class="instruction">
+      <h3>CMP</h3>
+      <p><strong>Usage:</strong> <code class="code-box">CMP,regA,regB</code></p>
+      <p><strong>Description:</strong> Compares <code>regA</code> and <code>regB</code>. Affects conditional jump results.</p>
+      <p><strong>Example:</strong> <code class="code-box">CMP,0,R1</code> compares the values of R0 and R1.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>JMP</h3>
+      <p><strong>Usage:</strong> <code class="code-box">JMP,address</code></p>
+      <p><strong>Description:</strong> Unconditionally jump to the specified memory address.</p>
+      <p><strong>Example:</strong> <code class="code-box">JMP,10</code> jumps to address 10.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>JE / JNE / JZ / JNZ</h3>
+      <p><strong>Usage:</strong> <code class="code-box">JE,address</code>, <code>JNE,address</code>, etc.</p>
+      <p><strong>Description:</strong> Conditional jumps based on the result of <code>CMP</code> (equal, not equal, zero, not zero).</p>
+      <p><strong>Example:</strong> <code class="code-box">JE,20</code> jumps to address 20 if the last comparison was equal.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>CALL / RET</h3>
+      <p><strong>Usage:</strong> <code class="code-box">CALL,address</code>, <code>RET</code></p>
+      <p><strong>Description:</strong> <code>CALL</code> jumps to a subroutine, <code>RET</code> returns from it.</p>
+      <p><strong>Example:</strong> <code class="code-box">CALL,30</code> jumps to address 30; <code>RET</code> returns to the instruction after the call.</p>
+    </div>
+  </section>
+
+  <script src="../script.js"></script>
+</body>
+</html>

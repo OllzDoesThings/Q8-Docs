@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arithmetic Instructions - Q8 Assembly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Arithmetic Instructions</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <nav class="navbar" id="navbar">
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="../sections/data-movement.html" class="nav-link">Data Movement</a></li>
+      <li><a href="../sections/arithmetic.html" class="nav-link">Arithmetic</a></li>
+      <li><a href="../sections/logic.html" class="nav-link">Logic</a></li>
+      <li><a href="../sections/bitwise.html" class="nav-link">Bitwise</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Arithmetic Instructions</h2>
+
+    <div class="instruction">
+      <h3>ADD</h3>
+      <p><strong>Usage:</strong> <code class="code-box">ADD,regA,regB</code></p>
+      <p><strong>Description:</strong> Add the value of <code>regB</code> to <code>regA</code>.</p>
+      <p><strong>Example:</strong> <code class="code-box">ADD,0,1</code> adds the value of register <code>R1</code> to register <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>SUB</h3>
+      <p><strong>Usage:</strong> <code class="code-box">SUB,regA,regB</code></p>
+      <p><strong>Description:</strong> Subtract the value of <code>regB</code> from <code>regA</code>.</p>
+      <p><strong>Example:</strong> <code class="code-box">SUB,0,1</code> subtracts the value of register <code>R1</code> from register <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>INC</h3>
+      <p><strong>Usage:</strong> <code class="code-box">INC,reg</code></p>
+      <p><strong>Description:</strong> Increment the value of the specified register by 1.</p>
+      <p><strong>Example:</strong> <code class="code-box">INC,0</code> increments the value of register <code>R0</code> by 1.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>DEC</h3>
+      <p><strong>Usage:</strong> <code class="code-box">DEC,reg</code></p>
+      <p><strong>Description:</strong> Decrement the value of the specified register by 1.</p>
+      <p><strong>Example:</strong> <code class="code-box">DEC,0</code> decrements the value of register <code>R0</code> by 1.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>Example Program</h3>
+      <pre>
+<code class="code-box">
+LOAD,5,0     ; Load 5 into R0
+LOAD,3,1      ; Load 3 into R1
+ADD,0,1      ; R0 = R0 + R1 (R0 = 8)
+DEC,0          ; R0 = R0 - 1 (R0 = 7)
+</code>
+      </pre>
+    </div>
+  </section>
+
+  <script src="../script.js"></script>
+</body>
+</html>

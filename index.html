@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q8 Mini OS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Q8 Assembly Language</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <!-- Navigation Bar (Hamburger Menu) -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-links">
+      <li><a href="sections/data-movement.html" class="nav-link">Data Movement</a></li>
+      <li><a href="sections/arithmetic.html" class="nav-link">Arithmetic</a></li>
+      <li><a href="sections/logic.html" class="nav-link">Logic</a></li>
+      <li><a href="sections/bitwise.html" class="nav-link">Bitwise</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Section -->
+  <main>
+    This website is still a work in progress, expect there to be more added!
+    <section id="intro">
+      <h2>What is Q8?</h2>
+      <p>Q8 is an 8-bit CPU emulator designed to help users learn low-level programming and understand how an 8-bit CPU operates. It is part of a project aimed at exploring assembly language and the fundamentals of computer architecture.</p>
+      <p>The Q8 CPU supports a range of instructions that can manipulate data, perform arithmetic and logic operations, handle memory management, and more. Through coding in Q8 assembly, users can gain a deeper understanding of how computers execute instructions at the hardware level.</p>
+      <p>Whether you're interested in learning about CPU design, writing your own operating system, or simply curious about how CPUs work, Q8 provides an accessible starting point for exploring these topics.</p>
+    </section>
+
+    If you need to see how the instructions work, click the buttons above, as they tell you what you need to know.
+
+    <!-- More Sections Here (Data Movement, Arithmetic, etc.) -->
+
+    <section id="architecture">
+      <h2>Q8 Architecture</h2>
+      The Q8 has a total of 8 main-use registers, and 5 purpose-registers.
+      <h3>Registers Explained</h3>
+      <p><code class="code-box">R0 - R7</code>: These are general-purpose registers that can hold any 8-bit value. They are used for temporary data storage during program execution, such as holding operands for arithmetic operations or the result of calculations.</p>
+      <p><code class="code-box">HLT</code>: The Halt flag. When this is set to 1, it halts the program execution. This can be used to stop a program when a condition is met or when an error occurs.</p>
+      <p><code class="code-box">OL</code>: Output Line. This register controls output operations. When set to 1, it allows the program to output data on a specific line, such as the value stored in <code class="code-box">R0</code>.</p>
+      <p><code class="code-box">PC</code>: The Program Counter. This register holds the address of the next instruction to be executed. It automatically increments after each instruction is executed.</p>
+      <p><code class="code-box">SP</code>: Stack Pointer. This register is used to manage the call stack. It points to the top of the stack, allowing the program to push and pop values as needed during function calls.</p>
+      <p><code class="code-box">ZF</code>: Zero Flag. The Zero Flag is set when a comparison operation (e.g., <code class="code-box">CMP</code>) finds that two values are equal. It is used in conditional instructions, allowing the program to branch based on whether the last comparison was zero.</p>
+      
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

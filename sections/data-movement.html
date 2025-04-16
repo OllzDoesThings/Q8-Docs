@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Movement Instructions - Q8 Assembly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Data Movement Instructions</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <!-- Navigation Bar (Hamburger Menu) -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="../sections/data-movement.html" class="nav-link">Data Movement</a></li>
+      <li><a href="../sections/arithmetic.html" class="nav-link">Arithmetic</a></li>
+      <li><a href="../sections/logic.html" class="nav-link">Logic</a></li>
+      <li><a href="../sections/bitwise.html" class="nav-link">Bitwise</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Data Movement Instructions</h2>
+
+    <div class="instruction">
+      <h3>LOAD</h3>
+      <p><strong>Usage:</strong> <code class="code-box">LOAD,reg,value</code></p>
+      <p><strong>Description:</strong> Load an immediate value into the specified register.</p>
+      <p><strong>Example:</strong> <code class="code-box">LOAD,100,0</code> loads the value <code>100</code> into register <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>LOADM</h3>
+      <p><strong>Usage:</strong> <code class="code-box">LOADM,address,reg</code></p>
+      <p><strong>Description:</strong> Load the value from the address in memory, to the register.</p>
+      <p><strong>Example:</strong> <code class="code-box">LOADM,100,0</code> loads the memory address <code>100</code> into register <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>MOV</h3>
+      <p><strong>Usage:</strong> <code class="code-box">MOV,regA,regB</code></p>
+      <p><strong>Description:</strong> Copy value from <code>regB</code> to <code>regA</code>.</p>
+      <p><strong>Example:</strong> <code class="code-box">MOV,0,1</code> copies the value from register <code>R1</code> to register <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>STORE</h3>
+      <p><strong>Usage:</strong> <code class="code-box">STORE,reg,address</code></p>
+      <p><strong>Description:</strong> Store the value in the specified register into the memory address.</p>
+      <p><strong>Example:</strong> <code class="code-box">STORE,0,200</code> stores the value of register <code>R0</code> at memory address <code>200</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>PUSH</h3>
+      <p><strong>Usage:</strong> <code class="code-box">PUSH,reg</code></p>
+      <p><strong>Description:</strong> Push the value of the specified register onto the stack.</p>
+      <p><strong>Example:</strong> <code class="code-box">PUSH,0</code> pushes the value of register <code>R0</code> onto the stack.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>POP</h3>
+      <p><strong>Usage:</strong> <code class="code-box">POP,reg</code></p>
+      <p><strong>Description:</strong> Pop the value from the stack into the specified register.</p>
+      <p><strong>Example:</strong> <code class="code-box">POP,0</code> pops the top value from the stack into register <code>R0</code>.</p>
+    </div>
+
+    <div class="instruction">
+      <h3>Example Program</h3>
+      <pre>
+        <code class="code-box">
+LOAD,10,0   ; Move 10 into R0
+STORE,0,100   ; Store R0's value into memory address 100
+LOADM,100,1   ; Load the value from memory address 100 into R1
+        </code>
+      </pre>
+    </div>
+  </section>
+
+  <script src="../script.js"></script>
+</body>
+</html>
